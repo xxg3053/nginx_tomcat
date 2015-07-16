@@ -1,0 +1,4 @@
+步骤1:解压两个免安装的tomcat6,分别把放入tomcat1,tomcat2里面的server.xml覆盖原本的server.xml,然后修改两个server.xml的项目指向路径(Context的docbase属性)
+步骤2:启动两个tomcat,免安装的就用bin下面的start就可以,如果没意外就成功了,不用关闭,等下可以直接访问看效果
+步骤3:修改conf里面nginx.conf的location 属性,改成项目的路径,启动nginx,默认是80端口
+步骤4:打开浏览器访问localhost/nginx/index.jsp;如果没问题就是看到两个tomcat的小黑窗口是分别都有东西显示出来的,很明显每次请求有一定的几率分配到任意一个tomcat下
